@@ -3,4 +3,4 @@ INSERT INTO etat (libelle) VALUES ('Fermé');
 INSERT INTO etat (libelle) VALUES ('Ouvert');
 INSERT INTO etat (libelle) VALUES ('En création');
 INSERT INTO etat (libelle) VALUES ('En cours');
-INSERT INTO etat (libelle) VALUES ('Ouvert'
+INSERT INTO etat (libelle) VALUES ('Ouvert');
