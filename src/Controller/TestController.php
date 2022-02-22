@@ -4,28 +4,26 @@ namespace App\Controller;
 
 use App\Entity\Ville;
 use App\Repository\VilleRepository;
-use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\JsonResponse;
+
+
+/**
+ * @AsCon
+ */
 
 class TestController extends AbstractController
 {
 
 
-    /**
-     * @Route("/test", name="testGet", methods=['GET'])
-     */
-    public function getVille(VilleRepository $villeRepository): Response
+
+    public function villeGetTest(VilleRepository $villeRepository): Ville
     {
-        $url = 'http://localhost:4200/accueil';
-        return new JsonResponse($villeRepository->find(1));
+        $ville= new Ville("coucouVille","66666");
+        return $ville;
     }
 
     /**
-     * @Route("/test", name="testPost", methods=['POST'])
+     * @Route("/test", name="testPost")
      */
     /*
     public function postVille(Request $request,EntityManagerInterface $entityManager): Response
